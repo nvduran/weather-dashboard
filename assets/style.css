@@ -1,0 +1,13 @@
+.col-4 {
+     background-color: lightseagreen;
+     /* margin: 1%;
+     padding: 1%; */
+}
+
+.col-8 {
+     background-color: lightcoral;
+}
+
+.row {
+     margin: 2%;
+}
