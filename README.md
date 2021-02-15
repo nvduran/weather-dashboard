@@ -1,5 +1,7 @@
 # weather-dashboard
 
+https://nvduran.github.io/weather-dashboard/.
+
 Weather Dashboard uses HTML, CSS, and Javascript to show the current weather and 5 day forecast of a chosen city.
 
 Weather Dashboard uses the OpenWeather API.
