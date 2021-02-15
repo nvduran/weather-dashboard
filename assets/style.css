@@ -1,5 +1,6 @@
 .col-4 {
      background-color: lightseagreen;
+     min-height: 500px;
      /* margin: 1%;
      padding: 1%; */
 }
@@ -12,14 +13,22 @@
      margin: 2%;
 }
 
-.uv-low{
+.uv-low {
      color: green;
 }
 
-.uv-moderate{
+.uv-moderate {
      color: yellow;
 }
 
-.uv-high{
+.uv-high {
      color: red;
-}    
+}   
+
+.underlined {
+     border-bottom: solid gray;
+}
+
+.col-lg-5ths {
+     width:20%
+}

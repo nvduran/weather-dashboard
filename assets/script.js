@@ -21,7 +21,7 @@ var weatherFetch = function(city){
 var addinfo = function(data){    
      console.log(data);   
      let cityName = $("<div>").text(data.name).addClass('h1');
-     let cityTemp = $("<div>").text("Temperature: " + data.main.temp + "°F");
+     let cityTemp = $("<div>").text("Temperature: " + data.main.temp.toFixed(1) + "°F");
      let cityHumidity = $("<div>").text("Humidity: " + data.main.humidity + "%");
      let cityWind = $("<div>").text("Wind Speed: " + data.wind.speed + " MPH");
 
@@ -56,5 +56,17 @@ var addUv = function(value){
           $(cityUv).addClass('uv-moderate');
      }else{
           $(cityUv).addClass('uv-high');
-     }
+     };
 };
+
+
+
+// var cardTest = function(){
+//      let testCard = $("<div>").addClass('card');
+//      let cardTitle = $("<div>").text('Header').addClass('card-header');
+//      $(testCard).append(cardTitle);
+//      $("#weather-div").append(testCard);
+     
+// };
+
+// cardTest();
