@@ -30,6 +30,7 @@ var addinfo = function(data){
      $("#weather-div").append(cityHumidity);
      $("#weather-div").append(cityWind);
      getUv(data);
+     forecast(data);
 };
 
 //get UV index
@@ -59,7 +60,15 @@ var addUv = function(value){
      };
 };
 
-
+var forecast = function(data){
+     var forecastApi = "https://api.openweathermap.org/data/2.5/forecast?q=" + data.name + "&units=imperial&appid=7718d66c5dd4f433e079cf4a982af6f7";
+     console.log(forecastApi);
+     fetch(forecastApi).then(function(response){
+          response.json().then(function(castData){
+               console.log(castData);
+          });
+     });
+};
 
 // var cardTest = function(){
 //      let testCard = $("<div>").addClass('card');
