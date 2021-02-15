@@ -40,7 +40,6 @@ var getUv = function(data){
      console.log(uvApi);
      fetch(uvApi).then(function(response){
           response.json().then(function(uvData){
-               console.log(uvData.value);
                addUv(uvData.value);
           });         
      });
@@ -49,4 +48,13 @@ var getUv = function(data){
 //add UV index to page
 var addUv = function(value){
      console.log(value);
+     let cityUv = $("<div>").text("UV Index: " + value);
+     $("#weather-div").append(cityUv);
+     if(value < 3){
+          $(cityUv).addClass('uv-low');
+     }else if(value >= 3 && value < 6){
+          $(cityUv).addClass('uv-moderate');
+     }else{
+          $(cityUv).addClass('uv-high');
+     }
 };
