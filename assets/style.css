@@ -7,6 +7,9 @@
 
 .col-8 {
      background-color: lightcoral;
+     border-bottom: solid gray;
+     border-top: solid gray;
+     border-left: solid gray;
 }
 
 .row {
@@ -26,7 +29,7 @@
 }   
 
 .underlined {
-     border-bottom: solid gray;
+
 }
 
 .col-lg-5ths {

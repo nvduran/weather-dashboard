@@ -75,6 +75,7 @@ var forecast = function(data){
 };
 //add forecast data to cards
 var castCard = function(castData){
+     console.log(castData);
      $("#header1").text(castData.list[0].dt_txt);
      $("#header2").text(castData.list[8].dt_txt);
      $("#header3").text(castData.list[16].dt_txt);
@@ -93,6 +94,7 @@ var castCard = function(castData){
      $("#hum4").text("Humidity: " + castData.list[24].main.humidity + "%");
      $("#hum5").text("Humidity: " + castData.list[32].main.humidity + "%");
      $(".card").show();
+     addIcon(castData);
 };
 
 var saveSearch = function(data){
@@ -111,6 +113,28 @@ var getSearch = function(){
      let citySearched = $("<div>").text(savedCity);
      $("#searches").append(citySearched);
      };
+};
+
+var addIcon = function(data){
+     var iconcode = data.list[0].weather[0].icon;
+     var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+     $('#wicon1').attr('src', iconurl);
+
+     var iconcode = data.list[8].weather[0].icon;
+     var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+     $('#wicon2').attr('src', iconurl);
+
+     var iconcode = data.list[16].weather[0].icon;
+     var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+     $('#wicon3').attr('src', iconurl);
+
+     var iconcode = data.list[24].weather[0].icon;
+     var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+     $('#wicon4').attr('src', iconurl);
+
+     var iconcode = data.list[32].weather[0].icon;
+     var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+     $('#wicon5').attr('src', iconurl);
 };
 
 getSearch();
