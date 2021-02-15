@@ -70,6 +70,11 @@ var forecast = function(data){
      });
 };
 
+var castCard = function(){
+     $("#header1").text('test');
+};
+
+castCard();
 // var cardTest = function(){
 //      let testCard = $("<div>").addClass('card');
 //      let cardTitle = $("<div>").text('Header').addClass('card-header');
