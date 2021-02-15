@@ -10,7 +10,7 @@ $("#stateBtn").on('click', function(){
 
 //pull weather data for chosen city
 var weatherFetch = function(city){
-     var apiUrl = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=7718d66c5dd4f433e079cf4a982af6f7";
+     var apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=7718d66c5dd4f433e079cf4a982af6f7";
      fetch(apiUrl).then(function(response){
           response.json().then(function(data){              
                addinfo(data);
@@ -39,7 +39,7 @@ var addinfo = function(data){
 var getUv = function(data){
      var cityLat = data.coord.lat.toFixed(2);
      var cityLon = data.coord.lon.toFixed(2);
-     var uvApi = "http://api.openweathermap.org/data/2.5/uvi?lat=" + cityLat + "&lon=" + cityLon + "&appid=7718d66c5dd4f433e079cf4a982af6f7";
+     var uvApi = "https://api.openweathermap.org/data/2.5/uvi?lat=" + cityLat + "&lon=" + cityLon + "&appid=7718d66c5dd4f433e079cf4a982af6f7";
      console.log(uvApi);
      fetch(uvApi).then(function(response){
           response.json().then(function(uvData){
